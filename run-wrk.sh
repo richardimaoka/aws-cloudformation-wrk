@@ -73,4 +73,8 @@ ${WRK_CMD}
 
 jq -s '.[0] * .[1] * .[2]' wrk_results.json wrk_parameters.json metadata.json > result.json
 
-
+BUCKET_NAME="samplebucket-richardimaoka-sample-sample"
+# move the result file to S3
+aws s3 cp \
+  "result.json" \
+  "s3://${BUCKET_NAME}/sample-folder/result.json"
