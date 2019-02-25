@@ -5,7 +5,7 @@ set -e
 
 # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html#instancedata-data-retrieval
 # 169.254.169.254 is a special (loopback?) address for EC2 metadat
-# 2> /dev/null to avoid curl statistics displayed on stdout.
+# 2> /dev/null to avoid curl statistics displayed on stdout
 AMI_ID=$(curl http://169.254.169.254/latest/meta-data/ami-id 2> /dev/null)
 INSTANCE_ID=$(curl http://169.254.169.254/latest/meta-data/instance-id 2> /dev/null)
 INSTANCE_TYPE=$(curl http://169.254.169.254/latest/meta-data/instance-type 2> /dev/null)

@@ -7,7 +7,7 @@ STACK_NAME="aws-cloudformation-wrk-1"
 set -e
 
 # Create the Cloudformation stack from the local template `cloudformation.yaml`
-SSH_LOCATION="$(curl ifconfig.co)/32"
+SSH_LOCATION="$(curl ifconfig.co)/32 2> /dev/null"
 aws cloudformation create-stack \
   --stack-name "${STACK_NAME}" \
   --template-body file://cloudformation.yaml \
