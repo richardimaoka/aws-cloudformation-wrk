@@ -1,6 +1,6 @@
 ## A demo to run wrk and save the result file to S3
 
-![](./demo.png)
+![](./demo.gif)
 
 This demo runs wrk on Amazon EC2, save its results into `.json` along with EC2 metadata,
 then save the `.json` file into S3.
